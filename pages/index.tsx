@@ -4,6 +4,7 @@ import About from "@/components/About";
 import VideoSection from "@/components/Video";
 import Process from "@/components/Process";
 import Services from "@/components/Services";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <VideoSection />
       <Process />
       <Services />
+      <Footer />
     </div>
   );
 }
