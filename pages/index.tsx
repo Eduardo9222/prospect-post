@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import VideoSection from "@/components/Video";
 import Process from "@/components/Process";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <VideoSection />
       <Process />
+      <Services />
     </div>
   );
 }
