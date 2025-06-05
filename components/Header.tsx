@@ -1,20 +1,52 @@
 // components/Header.tsx
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 
 const Header = () => {
+  const [active, setActive] = useState('Home');
+
   return (
-    <header className="bg-[#5B6D95] text-white px-6 py-4 shadow-md">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">PROSPECT <span className="text-blue-300">POST</span></div>
-        <nav className="space-x-6 hidden md:block">
-          <Link href="#">Home</Link>
-          <Link href="#about">About</Link>
-          <Link href="#services">Services</Link>
-        </nav>
-        <div className="space-x-4">
-          <button className="border border-white px-3 py-1 rounded-md">Login</button>
-          <button className="bg-white text-[#5B6D95] px-4 py-1 rounded-md">Get started</button>
+    <header className="bg-[#687BA5] text-white py-4 px-6 flex justify-between items-center shadow-md max-w-7xl mx-auto">
+      {/* Logo */}
+      <div className="gap-2 text-xl font-semibold">
+        <img src="/logo.png" alt="Prospect Post" className="h-8 w-auto logo" />
+      </div>
+
+      {/* Navigation */}
+      <nav className="gap-6 text-black">
+        <div className="bg-[#E7EAF2] rounded-full flex items-center px-2 py-1 gap-4">
+          {['Home', 'About'].map((item) => (
+            <Link
+              href={`#${active === 'Home' ? '' : 'about'}`}
+              key={item}
+              onClick={() => setActive(item)}
+              className={`px-4 py-1 rounded-full text-sm font-medium ${
+                active === item ? 'bg-white border border-[#6678A5]' : ''
+              }`}
+            >
+              {item}
+            </Link>
+          ))}
+
+          {/* Services Dropdown (static for now) */}
+          <button className="flex items-center gap-1 px-4 py-1 text-sm font-medium">
+            Services <ChevronDown className="w-4 h-4" />
+          </button>
         </div>
+      </nav>
+
+      {/* Login / Get Started */}
+      <div className="bg-[#E7EAF2] rounded-full p-1">
+        <Link href="/login" className="px-4 py-1 text-sm font-medium text-black">
+          Login
+        </Link>
+        <Link
+          href="/get-started"
+          className="bg-[#1B2B47] text-white px-4 py-1 rounded-full text-sm font-medium"
+        >
+          Get started
+        </Link>
       </div>
     </header>
   );
