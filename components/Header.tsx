@@ -10,7 +10,7 @@ const Header = () => {
     <header className="bg-[#687BA5] text-white py-4 px-6 flex justify-between items-center shadow-md max-w-7xl mx-auto">
       {/* Logo */}
       <div className="gap-2 text-xl font-semibold">
-        <img src="/logo.png" alt="Prospect Post" className="h-8 w-auto logo" />
+        <img src="/logo.png" alt="Prospect Post" className="w-auto logo" />
       </div>
 
       {/* Navigation */}

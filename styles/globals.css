@@ -27,6 +27,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#logo {
+.logo {
   max-width: 60%;
 }
