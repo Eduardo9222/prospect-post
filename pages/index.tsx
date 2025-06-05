@@ -1,10 +1,9 @@
+import About from "@/components/About";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import VideoSection from "@/components/Video";
-import Process from "@/components/Process";
-import Services from "@/components/Services";
-import Footer from "@/components/Footer";
+import Video from "@/components/Video";
+import InstallationProcess from "@/components/Process";
+
 
 export default function Home() {
   return (
@@ -12,10 +11,8 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-      <VideoSection />
-      <Process />
-      <Services />
-      <Footer />
+      <Video />
+      <InstallationProcess />
     </div>
   );
 }
