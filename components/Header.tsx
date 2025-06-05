@@ -30,7 +30,7 @@ const Header = () => {
 
           {/* Services Dropdown (static for now) */}
           <div className="relative group">
-            <Link href="#services" className="text-white">Services ▾</Link>
+            <Link href="#services">Services ▾</Link>
             <div className="absolute hidden group-hover:block bg-white text-black p-2 mt-1 rounded shadow">
               <p className="hover:bg-gray-200 px-2">Video</p>
               <p className="hover:bg-gray-200 px-2">Installation Process</p>
