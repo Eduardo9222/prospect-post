@@ -41,7 +41,7 @@ const Header = () => {
       </nav>
 
       {/* Login / Get Started */}
-      <div className="flex space-x-2 bg-[#E7EAF2]">
+      <div className="flex rounded-full space-x-2 bg-[#E7EAF2]">
         <Link href="/login" className="text-[#1A1A1A] px-4 py-2 rounded-full">
           Login
         </Link>
